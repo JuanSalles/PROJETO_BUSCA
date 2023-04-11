@@ -1,0 +1,36 @@
+body{
+
+    background: linear-gradient(180deg, #959494 0%, rgba(0, 0, 0, 0.21) 51.56%);
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+
+}
+
+
+header{
+
+    box-sizing: border-box;
+    position: relative;
+    width: 1440px;
+    height: 179px;
+
+    background: #595757;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+}
+
+.pesquisa{
+    position: absolute;
+    width: 626px;
+    height: 41px;
+    left: calc(50% - 626px/2);
+    top: 62px;
+
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 36px;
+}
