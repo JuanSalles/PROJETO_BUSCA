@@ -1,0 +1,15 @@
+.styleConteudo{
+    max-width: 1400px;
+    min-width: 400px;
+    max-height: 800px;
+    margin: 0 auto;
+    
+}
+ 
+.styleConteudo img {
+    width: 400px;
+    display: inline;
+    border: 30px;
+    padding: 30px;
+    
+}

@@ -1,0 +1,9 @@
+.pesquisa input{
+    color: azure;
+    text-align: center;
+    width: 626px;
+    height: 41px;
+    font-size: 35px;
+    background: #404d42;
+    border-radius: 36px;
+}
