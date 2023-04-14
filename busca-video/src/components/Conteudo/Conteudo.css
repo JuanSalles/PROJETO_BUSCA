@@ -13,3 +13,21 @@
     padding: 30px;
     
 }
+
+.pesquisa {
+    margin: 100px;
+}
+
+.pesquisa input{
+    color: azure;
+    text-align: center;
+    width: 626px;
+    height: 40px;
+    font-size: 35px;
+    background: #4a4b4a;
+    border-radius: 36px;
+    padding: 0px;
+    border: none;
+}
+
+

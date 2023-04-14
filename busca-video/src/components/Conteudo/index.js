@@ -1,15 +1,28 @@
 import './Conteudo.css'
+import { useState } from 'react';
 
+var meajude = "";
 
 const Conteudo = () => {
-  
+    var parse = require('html-react-parser');
+
+    const [atualiza, setAtualiza] = useState('');
+    meajude = atualiza
+    
     return(
-       
+      <>
+        <div className="pesquisa">
+
+          <input type='text' placeholder='Digite aqui seu filtro' value={atualiza} onChange={e => setAtualiza(e.target.value)}/>
+        
+        </div>
+
         <div className='styleConteudo'>
 
-          <Exibir/>
-          
+          {parse(Exibir())}
+            
         </div>
+      </>
     )
 }
 export default Conteudo;
@@ -18,7 +31,7 @@ var videos = {
   video1: {
       address: "./Imagens/ferrari.png",
       desc: "Carro de luxo da Ferrari na cor vermelha",
-      classe: "Carro"
+      classe: "carro"
   },
   video2: {
       address: "./Imagens/ps5.png",
@@ -52,29 +65,44 @@ const busca = (nome) => {
   var resultado = {};
   let teste = 0;
 
-  for (let i=0; i<Object.keys(videos).length ; i++){
-    
-    
-    switch (videos[`video${i+1}`].classe){
-      case nome:
+    for (let i=0; i<Object.keys(videos).length ; i++){
+      
+      if (nome === "") {
         resultado[teste] = videos[`video${i+1}`];
         teste++;
-        break;
-      default:
-    }
+      }else{
+      
+        switch (videos[`video${i+1}`].classe){
+          case nome:
+          
+            resultado[teste] = videos[`video${i+1}`];
+            teste++;
+            break;
+          
+          default:
+      }
+      }
 
-  } 
+    } 
+  
   return(resultado);
 } ;
 
+
+
 const Exibir = () => {
-  var resultado = busca("carro");
+ 
+  var resultado = busca(meajude);
+  var result = ""
+  console.log(resultado)
 
   for(let a=0; a<Object.keys(resultado).length; a++){
-    return(
-      <img src={resultado[a].address} alt={resultado[a].desc} className={resultado[a].classe}/>
-    )
-  }
+
+    result = result.concat(`<img src="${resultado[a].address}" alt="${resultado[a].desc}" className="${resultado[a].classe}"/>`)
   
+  }
+
+  console.log(result)
+  return(result)
 
 }
