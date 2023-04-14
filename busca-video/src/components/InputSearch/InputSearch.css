@@ -2,8 +2,21 @@
     color: azure;
     text-align: center;
     width: 626px;
-    height: 41px;
+    height: 40px;
     font-size: 35px;
-    background: #404d42;
+    background: #4a4b4a;
     border-radius: 36px;
+    padding: 0;
+    border: none;
+}
+.pesquisa button{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    font-size: 35px;
+    border-radius: 36px;
+    bottom: 0px;
+    margin: 0px 10px;
+    padding: 0px;
+    border: none;
 }
